@@ -62,7 +62,7 @@ PayrollApp/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/PayrollApp.git
+git clone https://github.com/aayan14/PayrollApp.git
 cd PayrollApp
 ```
 
