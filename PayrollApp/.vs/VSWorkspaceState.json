@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Models",
+    "\\Properties",
+    "\\Repos",
+    "\\Service",
+    "\\SQL",
+    "\\wwwroot"
+  ],
+  "SelectedNode": "\\SQL\\schema.sql",
+  "PreviewInSolutionExplorer": false
+}

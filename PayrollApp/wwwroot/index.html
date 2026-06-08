@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Run Module</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: white;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 32px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+            .card h2 {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+                color: #1a1a2e;
+            }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        select, input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+            select:focus, input:focus {
+                border-color: #4f46e5;
+            }
+
+        button {
+            padding: 9px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: #4f46e5;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background: #4338ca;
+            }
+
+            .btn-primary:disabled {
+                background: #a5b4fc;
+                cursor: not-allowed;
+            }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #333;
+        }
+
+            .btn-secondary:hover {
+                background: #e2e8f0;
+            }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            display: none;
+        }
+
+        .alert-error {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .alert-success {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+
+        .alert-warning {
+            background: #fffbeb;
+            color: #d97706;
+            border: 1px solid #fde68a;
+        }
+
+        .loading {
+            display: none;
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead tr {
+            background: #f8fafc;
+        }
+
+        th {
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 600;
+            color: #555;
+            border-bottom: 2px solid #e2e8f0;
+            font-size: 13px;
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #333;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: #f8fafc;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-green {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .badge-red {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+            .results-header h2 {
+                margin-bottom: 0;
+            }
+
+        .run-info {
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Payroll</h1>
+        <p class="subtitle">Calculate and manage monthly employee payroll</p>
+
+        <!-- Run Payroll Card -->
+        <div class="card">
+            <h2>Run Payroll</h2>
+            <div id="run-alert" class="alert"></div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="month">Month</label>
+                    <select id="month">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6" selected>June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="number" id="year" value="2026" min="2020" max="2099" style="width:100px" />
+                </div>
+                <button class="btn-primary" id="run-btn" onclick="runPayroll()">
+                    Run Payroll
+                </button>
+                <button class="btn-secondary" onclick="viewPayroll()">
+                    View Existing
+                </button>
+            </div>
+            <div class="loading" id="loading">Processing payroll...</div>
+        </div>
+
+        <!-- Results Card -->
+        <div class="card" id="results-card" style="display:none">
+            <div class="results-header">
+                <h2 id="results-title">Payroll Results</h2>
+                <span class="run-info" id="run-info"></span>
+            </div>
+            <div id="results-body"></div>
+        </div>
+    </div>
+
+    <script>
+    const BASE = 'http://localhost:5091/payrollapp';
+
+    function getMonthName(m) {
+        return ['','January','February','March','April','May','June',
+                'July','August','September','October','November','December'][m];
+    }
+
+    function formatINR(amount) {
+        return '₹' + Number(amount).toLocaleString('en-IN', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
+
+    function showAlert(id, type, message) {
+        const el = document.getElementById(id);
+        el.className = `alert alert-${type}`;
+        el.textContent = message;
+        el.style.display = 'block';
+    }
+
+    function hideAlert(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+
+        function renderTable(data) {
+            if (!data || data.length === 0) {
+                return '<div class="empty-state">No payroll data found.</div>';
+            }
+
+            const rows = data.map(e => `
+        <tr>
+            <td>${e.name}</td>
+            <td>${formatINR(e.basicSalary)}</td>
+            <td>${e.daysPresent} / ${e.totalWorkingDays}</td>
+            <td>${formatINR(e.grossPay)}</td>
+            <td>${formatINR(e.pfDeduction)}</td>
+            <td>${formatINR(e.professionalTax)}</td>
+            <td><strong>${formatINR(e.netPay)}</strong></td>
+            <td>
+                <span class="badge ${e.netPay > 0 ? 'badge-green' : 'badge-red'}">
+                    ${e.netPay > 0 ? 'Paid' : 'Zero Pay'}
+                </span>
+            </td>
+            <td>
+                <button class="btn-secondary" onclick="printSlip(${JSON.stringify(e).replace(/"/g, '&quot;')})">
+                    Print
+                </button>
+            </td>
+        </tr>
+    `).join('');
+
+            return `
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Basic Salary</th>
+                    <th>Attendance</th>
+                    <th>Gross Pay</th>
+                    <th>PF (12%)</th>
+                    <th>Prof. Tax</th>
+                    <th>Net Pay</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+        </table>
+    `;
+        }
+
+    async function runPayroll() {
+        const month = parseInt(document.getElementById('month').value);
+        const year = parseInt(document.getElementById('year').value);
+
+        hideAlert('run-alert');
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('run-btn').disabled = true;
+        document.getElementById('results-card').style.display = 'none';
+
+        try {
+            const res = await fetch(`${BASE}/payroll/run`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ month, year })
+            });
+
+            if (res.status === 409) {
+                showAlert('run-alert', 'warning',
+                    `Payroll for ${getMonthName(month)} ${year} has already been run. Use "View Existing" to see results.`);
+                return;
+            }
+
+            if (!res.ok) throw new Error('Failed to run payroll.');
+
+            const data = await res.json();
+            document.getElementById('results-title').textContent =
+                `Payroll — ${getMonthName(month)} ${year}`;
+            document.getElementById('run-info').textContent =
+                `${data.length} employees processed`;
+            document.getElementById('results-body').innerHTML = renderTable(data);
+            document.getElementById('results-card').style.display = 'block';
+            showAlert('run-alert', 'success',
+                `Payroll for ${getMonthName(month)} ${year} completed successfully.`);
+
+        } catch (err) {
+            showAlert('run-alert', 'error', err.message);
+        } finally {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('run-btn').disabled = false;
+        }
+    }
+
+    async function viewPayroll() {
+        const month = parseInt(document.getElementById('month').value);
+        const year = parseInt(document.getElementById('year').value);
+
+        hideAlert('run-alert');
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('results-card').style.display = 'none';
+
+        try {
+            const res = await fetch(`${BASE}/payroll/run/${month}/${year}`);
+
+            if (res.status === 404) {
+                showAlert('run-alert', 'warning',
+                    `No payroll found for ${getMonthName(month)} ${year}. Run payroll first.`);
+                return;
+            }
+
+            if (!res.ok) throw new Error('Failed to fetch payroll.');
+
+            const data = await res.json();
+            document.getElementById('results-title').textContent =
+                `Payroll — ${getMonthName(month)} ${year}`;
+            document.getElementById('run-info').textContent =
+                `${data.length} employees`;
+            document.getElementById('results-body').innerHTML = renderTable(data);
+            document.getElementById('results-card').style.display = 'block';
+
+        } catch (err) {
+            showAlert('run-alert', 'error', err.message);
+        } finally {
+            document.getElementById('loading').style.display = 'none';
+        }
+        }
+
+        function printSlip(e) {
+            const month = parseInt(document.getElementById('month').value);
+            const year = parseInt(document.getElementById('year').value);
+
+            const html = '<!DOCTYPE html><html><head><title>Payslip - ' + e.name + '</title><style>'
+                + 'body{font-family:Segoe UI,sans-serif;padding:40px;color:#333}'
+                + '.header{text-align:center;margin-bottom:32px}'
+                + '.header h1{font-size:22px;font-weight:600;margin-bottom:4px}'
+                + '.header p{color:#666;font-size:14px}'
+                + 'hr{border:none;border-top:2px solid #e2e8f0;margin:24px 0}'
+                + '.section{margin-bottom:24px}'
+                + '.section h2{font-size:13px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}'
+                + '.row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:14px}'
+                + '.row:last-child{border-bottom:none}'
+                + '.row span:last-child{font-weight:500}'
+                + '.net-pay{background:#f0fdf4;border-radius:8px;padding:16px;display:flex;justify-content:space-between;align-items:center;margin-top:24px}'
+                + '.net-pay span:first-child{font-size:15px;font-weight:600;color:#16a34a}'
+                + '.net-pay span:last-child{font-size:20px;font-weight:700;color:#16a34a}'
+                + '.footer{text-align:center;margin-top:40px;font-size:12px;color:#aaa}'
+                + '@media print{body{padding:20px}button{display:none}}'
+                + '</style></head><body>'
+                + '<div class="header"><h1>Payslip</h1><p>' + getMonthName(month) + ' ' + year + '</p></div>'
+                + '<hr/>'
+                + '<div class="section"><h2>Employee Details</h2>'
+                + '<div class="row"><span>Name</span><span>' + e.name + '</span></div>'
+                + '<div class="row"><span>Employee ID</span><span>#' + e.employeeId + '</span></div>'
+                + '<div class="row"><span>Basic Salary</span><span>' + formatINR(e.basicSalary) + '</span></div>'
+                + '</div>'
+                + '<div class="section"><h2>Attendance</h2>'
+                + '<div class="row"><span>Total Working Days</span><span>' + e.totalWorkingDays + '</span></div>'
+                + '<div class="row"><span>Days Present</span><span>' + e.daysPresent + '</span></div>'
+                + '<div class="row"><span>Days Absent</span><span>' + (e.totalWorkingDays - e.daysPresent) + '</span></div>'
+                + '</div>'
+                + '<div class="section"><h2>Earnings</h2>'
+                + '<div class="row"><span>Gross Pay</span><span>' + formatINR(e.grossPay) + '</span></div>'
+                + '</div>'
+                + '<div class="section"><h2>Deductions</h2>'
+                + '<div class="row"><span>Provident Fund (12%)</span><span>- ' + formatINR(e.pfDeduction) + '</span></div>'
+                + '<div class="row"><span>Professional Tax</span><span>- ' + formatINR(e.professionalTax) + '</span></div>'
+                + '</div>'
+                + '<div class="net-pay"><span>Net Pay</span><span>' + formatINR(e.netPay) + '</span></div>'
+                + '<div class="footer">This is a system generated payslip. No signature required.</div>'
+                + '<script>window.print();<'+' /script>'
+                + '<'+'/body><'+'/html>';
+
+            const win = window.open('', '_blank');
+            win.document.write(html);
+            win.document.close();
+        }
+    </script>
+</body>
+</html>
