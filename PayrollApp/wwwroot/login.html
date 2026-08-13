@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayrollApp — Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            width: 360px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 13px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+            input:focus {
+                border-color: #4f46e5;
+            }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+
+            button:hover {
+                background: #4338ca;
+            }
+
+            button:disabled {
+                background: #a5b4fc;
+                cursor: not-allowed;
+            }
+
+        .alert {
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            display: none;
+        }
+
+        .alert-error {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Employee Payroll</h1>
+        <p class="subtitle">HR Team Login</p>
+
+        <div id="login-alert" class="alert alert-error"></div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" />
+        </div>
+        <button id="login-btn" onclick="login()">Login</button>
+    </div>
+
+    <script>
+        const BASE = window.location.origin + '/payrollapp';
+
+        // If already logged in, skip straight to dashboard
+        if (localStorage.getItem('authToken')) {
+            window.location.href = 'index.html';
+        }
+
+        async function login() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const alertEl = document.getElementById('login-alert');
+            const btn = document.getElementById('login-btn');
+
+            alertEl.style.display = 'none';
+
+            if (!username || !password) {
+                alertEl.textContent = 'Please enter both username and password.';
+                alertEl.style.display = 'block';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Logging in...';
+
+            try {
+                const res = await fetch(`${BASE}/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (!res.ok) {
+                    alertEl.textContent = 'Invalid username or password.';
+                    alertEl.style.display = 'block';
+                    return;
+                }
+
+                const data = await res.json();
+
+                // Decode the JWT payload to extract the role (no server call needed)
+                const payload = JSON.parse(atob(data.token.split('.')[1]));
+                const role = payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+                const fullNameClaim = payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'];
+                const fullName = Array.isArray(fullNameClaim) ? fullNameClaim[1] : fullNameClaim;
+
+                localStorage.setItem('authToken', data.token);
+                localStorage.setItem('userRole', role);
+                localStorage.setItem('userFullName', fullName || username);
+
+                window.location.href = 'index.html';
+
+            } catch (err) {
+                alertEl.textContent = 'Login failed. ' + err.message;
+                alertEl.style.display = 'block';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Login';
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('password').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') login();
+        });
+    </script>
+</body>
+</html>

@@ -51,3 +51,14 @@ CREATE TABLE PayrollDetails (
     FOREIGN KEY (RunId) REFERENCES PayrollRuns(RunId),
     FOREIGN KEY (EmployeeId) REFERENCES Employees(EmployeeId)
 );
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Users' AND xtype='U')
+CREATE TABLE Users (
+    UserId       INT PRIMARY KEY IDENTITY(1,1),
+    Username     NVARCHAR(50) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    FullName     NVARCHAR(100) NOT NULL,
+    Role         NVARCHAR(20) NOT NULL CHECK (Role IN ('SuperAdmin', 'AssociateHR')),
+    CreatedAt    DATETIME NOT NULL DEFAULT GETDATE(),
+    IsActive     BIT NOT NULL DEFAULT 1
+);

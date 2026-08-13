@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PayrollApp.Models;
 using PayrollApp.Services;
@@ -6,27 +7,27 @@ namespace PayrollApp.Controllers
 {
     [ApiController]
     [Route("payrollapp/payroll")]
+    [Authorize]
     public class PayrollApp : ControllerBase
     {
         private readonly IPayrollService _service;
+        private readonly ILogger<PayrollApp> _logger;
 
-        public PayrollApp(IPayrollService service)
+        public PayrollApp(IPayrollService service, ILogger<PayrollApp> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpPost("run")]
+        [Authorize (Roles="SuperAdmin")]
         public async Task<IActionResult> RunPayroll([FromBody] PayrollRunRequest request)
         {
-            try
-            {
+            
                 var result = await _service.RunPayrollAsync(request.Month, request.Year);
+            _logger.LogInformation("RunPayroll Controller Ended");
                 return StatusCode(201, result);
-            }
-            catch (Exception ex) 
-            {
-                return Conflict("Payroll run already exists for this month and year.");
-            }
+            
 
         }
 

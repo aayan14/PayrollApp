@@ -227,12 +227,51 @@
             font-size: 13px;
             color: #888;
         }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 14px;
+            border-radius: 10px;
+        }
+
+            .user-info span {
+                color: white;
+                font-size: 13px;
+            }
+
+        .role-badge {
+            background: rgba(255,255,255,0.25);
+            padding: 3px 10px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Employee Payroll</h1>
-        <p class="subtitle">Calculate and manage monthly employee payroll</p>
+        <div class="topbar">
+            <div>
+                <h1>Employee Payroll</h1>
+                <p class="subtitle">Calculate and manage monthly employee payroll</p>
+            </div>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <span id="user-role" class="role-badge"></span>
+                <a id="users-link" href="users.html" style="display:none; color:white; font-size:13px; text-decoration:underline;">Manage Users</a>
+                <button class="btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
 
         <!-- Run Payroll Card -->
         <div class="card">
@@ -281,7 +320,36 @@
     </div>
 
     <script>
-    const BASE = 'http://localhost:5091/payrollapp';
+        
+        const BASE = window.location.origin + '/payrollapp';
+
+        const authToken = localStorage.getItem("authToken");
+        const userRole = localStorage.getItem("userRole");
+        const userFullName = localStorage.getItem("userFullName");
+
+        if (!authToken) {
+            window.location.href = "login.html";
+        }
+
+        document.getElementById("user-name").textContent = userFullName || "User";
+        document.getElementById("user-role").textContent = userRole || "";
+
+        if (userRole == "AssociateHR") {
+            const runBtn = document.getElementById("run-btn");
+            runBtn.disabled = true;
+            runBtn.title = "Only SuperAdmin can run Payrolls";
+            runBtn.style.opacity = 0.5
+        }
+
+        if (userRole === 'SuperAdmin') {
+            document.getElementById('users-link').style.display = 'inline';
+        }
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        }
+
 
     function getMonthName(m) {
         return ['','January','February','March','April','May','June',
@@ -365,13 +433,34 @@
         try {
             const res = await fetch(`${BASE}/payroll/run`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${authToken}`}, 
                 body: JSON.stringify({ month, year })
             });
+
+            if (res.status === 401 || res.status === 403) {
+                showAlert('run-alert', 'error', 'You are not authorized to perform this action.');
+                return;
+            }
 
             if (res.status === 409) {
                 showAlert('run-alert', 'warning',
                     `Payroll for ${getMonthName(month)} ${year} has already been run. Use "View Existing" to see results.`);
+                return;
+            }
+
+            if (res.status === 400) {
+                const err = await res.json();
+                let message = "Invalid Inputs";
+
+                if (err.errors) {
+                    message = Object.values(err.errors).flat().join(' ');
+                }
+                else if (err.message) {
+                    message = err.message;
+                }
+                showAlert('run-alert', 'error', message);
                 return;
             }
 
@@ -404,7 +493,10 @@
         document.getElementById('results-card').style.display = 'none';
 
         try {
-            const res = await fetch(`${BASE}/payroll/run/${month}/${year}`);
+            const res = await fetch(`${BASE}/payroll/run/${month}/${year}`,
+                { headers: { 'Authorization': `Bearer ${authToken}` } }
+
+            );
 
             if (res.status === 404) {
                 showAlert('run-alert', 'warning',

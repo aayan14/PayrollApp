@@ -1,0 +1,577 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\service\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\service\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\wwwroot\\users.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\wwwroot\\users.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\sql\\dump.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\sql\\dump.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\payrollrunrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\payrollrunrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\repos\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\repos\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\repos\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\repos\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\validators\\createuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\validators\\createuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\validators\\runrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\validators\\runrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\sql\\schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\sql\\schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\repos\\payrollrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\repos\\payrollrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\payrollapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\payrollapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\service\\payrollcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\service\\payrollcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\repos\\ipayrollrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\repos\\ipayrollrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\models\\payrollattendancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\models\\payrollattendancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\sql\\sp_savepayrollrun.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\sql\\sp_savepayrollrun.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\middleware\\execptionahandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\middleware\\execptionahandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\sql\\schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\sql\\schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|c:\\users\\hp\\desktop\\timelabassignment\\paymentappimprovment\\payrollapp\\sql\\dump.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{C4B24EA7-1BF5-4A49-A1EA-5807BB5B9FB6}|PayrollApp\\PayrollApp.csproj|solutionrelative:payrollapp\\sql\\dump.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "PayrollApp\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T19:41:23.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "PayrollApp\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\wwwroot\\index.html",
+              "RelativeToolTip": "PayrollApp\\wwwroot\\index.html",
+              "ViewState": "AgIAADoBAAAAAAAAAAAAAEMBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-06-09T20:09:44.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\AuthService.cs",
+              "RelativeToolTip": "PayrollApp\\Service\\AuthService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAmwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T07:32:53.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\appsettings.json",
+              "RelativeDocumentMoniker": "PayrollApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\appsettings.json",
+              "RelativeToolTip": "PayrollApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-08T07:26:08.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Program.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Program.cs",
+              "RelativeToolTip": "PayrollApp\\Program.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAHQAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T19:37:08.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dump.sql ",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\SQL\\dump.sql",
+              "RelativeDocumentMoniker": "PayrollApp\\SQL\\dump.sql",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\SQL\\dump.sql",
+              "RelativeToolTip": "PayrollApp\\SQL\\dump.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-01T20:43:20.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PayrollApp\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T08:22:07.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\UserRepo.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Repos\\UserRepo.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\UserRepo.cs",
+              "RelativeToolTip": "PayrollApp\\Repos\\UserRepo.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T14:49:25.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PayrollService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\PayrollService.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Service\\PayrollService.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\PayrollService.cs",
+              "RelativeToolTip": "PayrollApp\\Service\\PayrollService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T19:56:36.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "login.html",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\wwwroot\\login.html",
+              "RelativeDocumentMoniker": "PayrollApp\\wwwroot\\login.html",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\wwwroot\\login.html",
+              "RelativeToolTip": "PayrollApp\\wwwroot\\login.html",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-08-11T17:29:47.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PayrollController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\PayrollController.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Controllers\\PayrollController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\PayrollController.cs",
+              "RelativeToolTip": "PayrollApp\\Controllers\\PayrollController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T19:54:57.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "users.html",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\wwwroot\\users.html",
+              "RelativeDocumentMoniker": "PayrollApp\\wwwroot\\users.html",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\wwwroot\\users.html",
+              "RelativeToolTip": "PayrollApp\\wwwroot\\users.html",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAAAAkBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-08-13T00:06:34.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PayrollRunRequest.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\PayrollRunRequest.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\PayrollRunRequest.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\PayrollRunRequest.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\PayrollRunRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T19:01:24.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Repos\\IUserRepo.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\IUserRepo.cs",
+              "RelativeToolTip": "PayrollApp\\Repos\\IUserRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T14:48:06.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RunRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Validators\\RunRequestValidator.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Validators\\RunRequestValidator.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Validators\\RunRequestValidator.cs",
+              "RelativeToolTip": "PayrollApp\\Validators\\RunRequestValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T19:00:14.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserResponse.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\UserResponse.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\UserResponse.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\UserResponse.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\UserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T19:14:56.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\UserService.cs",
+              "RelativeToolTip": "PayrollApp\\Service\\UserService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T19:32:24.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\CreateUserRequest.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\CreateUserRequest.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\CreateUserRequest.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\CreateUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T19:14:35.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateUserRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Validators\\CreateUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Validators\\CreateUserRequestValidator.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Validators\\CreateUserRequestValidator.cs",
+              "RelativeToolTip": "PayrollApp\\Validators\\CreateUserRequestValidator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T19:15:56.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\IUserService.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Service\\IUserService.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\IUserService.cs",
+              "RelativeToolTip": "PayrollApp\\Service\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T19:31:38.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PayrollRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\PayrollRepo.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Repos\\PayrollRepo.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\PayrollRepo.cs",
+              "RelativeToolTip": "PayrollApp\\Repos\\PayrollRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T19:40:48.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "schema.sql ",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\SQL\\schema.sql",
+              "RelativeDocumentMoniker": "PayrollApp\\SQL\\schema.sql",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\SQL\\schema.sql",
+              "RelativeToolTip": "PayrollApp\\SQL\\schema.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-10T14:26:12.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\User.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T14:45:10.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\IAuthService.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Service\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\IAuthService.cs",
+              "RelativeToolTip": "PayrollApp\\Service\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T07:32:15.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T07:28:05.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\LoginResponse.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T07:28:42.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PayrollCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\PayrollCalculator.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Service\\PayrollCalculator.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Service\\PayrollCalculator.cs",
+              "RelativeToolTip": "PayrollApp\\Service\\PayrollCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T20:29:27.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PayrollApp.csproj",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\PayrollApp.csproj",
+              "RelativeDocumentMoniker": "PayrollApp\\PayrollApp.csproj",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\PayrollApp.csproj",
+              "RelativeToolTip": "PayrollApp\\PayrollApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-08T08:34:44.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ExecptionaHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Middleware\\ExecptionaHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Middleware\\ExecptionaHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Middleware\\ExecptionaHandlingMiddleware.cs",
+              "RelativeToolTip": "PayrollApp\\Middleware\\ExecptionaHandlingMiddleware.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T19:39:41.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IPayrollRepo.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\IPayrollRepo.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Repos\\IPayrollRepo.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Repos\\IPayrollRepo.cs",
+              "RelativeToolTip": "PayrollApp\\Repos\\IPayrollRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T20:36:43.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PayrollAttendanceDto.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\PayrollAttendanceDto.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Models\\PayrollAttendanceDto.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Models\\PayrollAttendanceDto.cs",
+              "RelativeToolTip": "PayrollApp\\Models\\PayrollAttendanceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T20:35:40.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "sp_SavePayrollRun.sql",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\SQL\\sp_SavePayrollRun.sql",
+              "RelativeDocumentMoniker": "PayrollApp\\SQL\\sp_SavePayrollRun.sql",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\SQL\\sp_SavePayrollRun.sql",
+              "RelativeToolTip": "PayrollApp\\SQL\\sp_SavePayrollRun.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-01T20:49:39.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "PayrollApp\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\TimeLabAssignment\\PaymentAppImprovment\\PayrollApp\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "PayrollApp\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T17:59:47.314Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "PayrollApp.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "payrollapp/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PayrollApp.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PayrollApp.Controllers.EmployeeController",
     "Method": "GetAll",
     "RelativePath": "payrollapp/employees",
@@ -75,6 +91,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PayrollApp.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "payrollapp/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PayrollApp.Models.CreateUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PayrollApp.Controllers.UsersController",
+    "Method": "GetAllUsers",
+    "RelativePath": "payrollapp/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
