@@ -1,61 +1,107 @@
-# Employee Payroll Run Module
+# Employee Payroll Management System
 
-A full-stack payroll management system built with ASP.NET Core 8, Dapper, SQL Server, and vanilla HTML/JS — built as part of a Full Stack Developer technical assessment.
+A full-stack payroll management system with role-based access control, JWT authentication, and automated CI/CD deployment to Azure.
+
+![Deploy Status](https://github.com/aayan14/PayrollApp/actions/workflows/deploy.yml/badge.svg)
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
+![Azure](https://img.shields.io/badge/Deployed%20on-Azure-0078D4)
+
+**Live Demo:** [https://payroll-app-dugncvcygtc2eyh8.indiasouthcentral-01.azurewebsites.net/login.html](https://payroll-app-dugncvcygtc2eyh8.indiasouthcentral-01.azurewebsites.net/login.html)
+
+**Demo credentials:**
+| Role | Username | Password |
+|---|---|---|
+| Super Admin (Head HR) | `superadmin` | `SuperAdmin@123` |
+| Associate HR | *(create one via the Users page after logging in as Super Admin)* | |
 
 ---
+
+## Overview
+
+Replaces manual Excel-based payroll processing with a proper full-stack system. HR teams can calculate monthly salaries, track attendance, generate payslips, and manage user access — all with role-based permissions enforced end to end, from the UI down to the API.
+
+## Key Features
+
+- **JWT authentication** with role-based authorization (Super Admin vs Associate HR)
+- **Automated payroll calculation** — gross pay, PF deduction, professional tax, net pay
+- **Immutable payroll runs** — once finalized, records cannot be edited or deleted
+- **Printable payslips** per employee
+- **Centralized exception handling** — consistent JSON error responses across the API
+- **Input validation** with FluentValidation (business rules like "no future-dated payroll runs")
+- **Structured logging** with Serilog (console + rolling file logs)
+- **User management** — Super Admins can create and manage HR accounts, passwords hashed with BCrypt
+- **CI/CD pipeline** — every push to `main` automatically builds, tests, and deploys to Azure
 
 ## Tech Stack
 
 | Layer | Technology |
 |---|---|
 | Backend | ASP.NET Core 8 Web API (C#) |
-| DB Access | Dapper + ADO.NET |
-| Database | SQL Server LocalDB |
-| Frontend | HTML + Vanilla JS |
+| Database Access | Dapper + ADO.NET |
+| Database | Azure SQL Database |
+| Frontend | HTML, CSS, Vanilla JS |
+| Authentication | JWT Bearer tokens, BCrypt password hashing |
+| Validation | FluentValidation |
+| Logging | Serilog |
 | Testing | xUnit |
+| Hosting | Azure App Service |
+| CI/CD | GitHub Actions |
 
----
+## Architecture
 
-## Project Structure
+Frontend (HTML/JS)
+↓
+Controllers (thin, no business logic)
+↓
+Services (business logic, calculation, validation orchestration)
+↓
+Repositories (Dapper — all DB access via stored procedures)
+↓
+Azure SQL Database
 
-```
-PayrollApp/
-├── Controllers/         
-│   ├── EmployeeController.cs
-│   └── PayrollController.cs
-├── Services/            
-│   ├── IPayrollService.cs
-│   ├── PayrollService.cs
-│   └── PayrollCalculator.cs
-├── Repos/               
-│   ├── IEmployeeRepo.cs
-│   ├── EmployeeRepo.cs
-│   ├── IPayrollRepo.cs
-│   └── PayrollRepo.cs
-├── Models/              
-│   ├── Employee.cs
-│   ├── PayrollDetail.cs
-│   ├── PayrollRun.cs
-│   └── PayrollRunRequest.cs
-├── SQL/                 
-│   ├── schema.sql
-│   ├── dump.sql
-│   ├── usp_RunPayroll.sql
-│   ├── usp_GetAllEmployees.sql
-│   ├── usp_GetPayrollByMonthYear.sql
-│   └── usp_GetPayrollSlip.sql
-├── wwwroot/
-│   └── index.html
-└── Program.cs
-```
+Cross-cutting concerns handled via middleware:
+- **ExceptionHandlingMiddleware** — catches all unhandled exceptions, returns consistent JSON errors
+- **FluentValidation auto-validation** — rejects invalid requests before they reach controllers
+- **JWT Authentication middleware** — validates tokens on every protected request
 
----
+## Role Hierarchy
 
-## How to Run Locally
+| Action | Super Admin | Associate HR |
+|---|---|---|
+| Login | ✅ | ✅ |
+| View payroll runs | ✅ | ✅ |
+| View/print payslips | ✅ | ✅ |
+| Trigger payroll run | ✅ | ❌ |
+| Create/manage HR users | ✅ | ❌ |
+
+## API Endpoints
+
+| Method | Endpoint | Auth Required | Description |
+|---|---|---|---|
+| POST | /api/auth/login | No | Authenticate and receive JWT |
+| POST | /api/users | Super Admin | Create a new HR user |
+| GET | /api/users | Super Admin | List all HR users |
+| GET | /api/employees | Any logged-in user | List all employees |
+| POST | /api/payroll/run | Super Admin | Trigger a payroll run |
+| GET | /api/payroll/run/{month}/{year} | Any logged-in user | Get saved payroll for a month |
+| GET | /api/payroll/{runId}/slip/{employeeId} | Any logged-in user | Get individual payslip |
+
+## CI/CD Pipeline
+
+Every push to `main` triggers a GitHub Actions workflow that:
+1. Restores dependencies
+2. Builds the solution
+3. Runs the full xUnit test suite — **deployment is blocked if any test fails**
+4. Publishes the build
+5. Deploys automatically to Azure App Service
+
+See [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+## Running Locally
 
 ### Prerequisites
 - .NET 8 SDK
-- SQL Server LocalDB (ships with Visual Studio 2022)
+- SQL Server LocalDB (or any SQL Server instance)
 - Visual Studio 2022
 
 ### Steps
@@ -66,81 +112,18 @@ git clone https://github.com/aayan14/PayrollApp.git
 cd PayrollApp
 ```
 
-2. Update the connection string in `appsettings.json`:
+2. Update `appsettings.json` with your local connection string:
 ```json
 "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=PayrollDB;Trusted_Connection=True;"
 }
 ```
 
-3. Open `PayrollApp.sln` in Visual Studio 2022
+3. Open `PayrollApp.sln` in Visual Studio, press **F5**
 
-4. Press **F5** to run — the app automatically:
-   - Creates the `PayrollDB` database and all tables
-   - Seeds 5 employees across 2 departments
-   - Seeds attendance records for the current month
-   - Creates all stored procedures
+The app automatically creates the database schema, seeds sample data, and creates a default Super Admin account on first run.
 
-5. Open `http://localhost:5091/index.html` for the frontend
-
-6. Open `http://localhost:5091/swagger` to test the API
-
-> No manual SQL steps required. Everything runs automatically on startup.
-
----
-
-## Database Setup
-
-**Connection string format:**
-```
-Server=(localdb)\\mssqllocaldb;Database=PayrollDB;Trusted_Connection=True;
-```
-
-**To run scripts manually (optional):**
-
-Run the following files in order using SSMS or sqlcmd against your `PayrollDB` database:
-
-1. `SQL/schema.sql` — creates all tables with relationships and constraints
-2. `SQL/dump.sql` — inserts seed data (5 employees, 2 departments, attendance)
-3. `SQL/usp_RunPayroll.sql` — payroll calculation and save procedure
-4. `SQL/usp_GetAllEmployees.sql`
-5. `SQL/usp_GetPayrollByMonthYear.sql`
-6. `SQL/usp_GetPayrollSlip.sql`
-
----
-
-## API Endpoints
-
-| Method | Endpoint | Description | Response |
-|---|---|---|---|
-| GET | /api/employees | List all employees | 200 OK |
-| POST | /api/payroll/run | Trigger payroll run `{ month, year }` | 201 Created |
-| GET | /api/payroll/run/{month}/{year} | Get saved payroll for month/year | 200 / 404 |
-| GET | /api/payroll/{runId}/slip/{employeeId} | Get individual employee payslip | 200 / 404 |
-
-**Each payroll response includes:** EmployeeId, Name, BasicSalary, WorkingDays, DaysPresent, GrossPay, PFDeduction, ProfessionalTax, NetPay
-
----
-
-## Payroll Calculation Rules
-
-| Component | Rule |
-|---|---|
-| Gross Pay | (Basic Salary ÷ Total Working Days) × Days Present |
-| PF Deduction | 12% of Basic Salary |
-| Professional Tax | Flat ₹200 per month |
-| Net Pay | Gross Pay − PF − Professional Tax |
-
-**Example — Ravi Sharma (from brief):**
-
-| Component | Calculation | Amount |
-|---|---|---|
-| Gross Pay | (30,000 ÷ 26) × 24 | ₹27,692.31 |
-| PF | 12% of ₹30,000 | ₹3,600.00 |
-| Professional Tax | Flat | ₹200.00 |
-| Net Pay | 27,692.31 − 3,600 − 200 | ₹23,892.31 |
-
----
+4. Open `http://localhost:{port}/login.html`
 
 ## Running Tests
 
@@ -148,61 +131,20 @@ Run the following files in order using SSMS or sqlcmd against your `PayrollDB` d
 dotnet test
 ```
 
-Or via Visual Studio: **Test → Run All Tests**
+6 unit tests cover the payroll calculation logic (`PayrollCalculator.cs`), including edge cases like zero attendance and zero working days.
 
-6 unit tests covering:
-- Exact calculation match from the brief (Ravi Sharma example)
-- Full attendance — gross equals basic salary
-- Zero days present — gross is zero
-- Zero working days — divide by zero protection
-- PF always 12% of basic salary
+## Design Decisions & Trade-offs
 
----
+- **Calculation logic lives in C#, not SQL** — moved from stored procedures to `PayrollCalculator.cs` for testability; stored procedures now handle only data access
+- **BCrypt over plain hashing** — deliberately slow, salted hashing resistant to brute-force attacks
+- **Payroll runs are immutable** — enforced at the database level with a unique constraint on (Month, Year), not just application logic
+- **JWT secret stored in Azure App Service Configuration**, never committed to source control
+- **Azure SQL Serverless tier** — auto-pause disabled to avoid cold-start delays affecting live demos
 
-## Bonus Features Completed
+## What I'd Add With More Time
 
-- ✅ HTTP 409 Conflict if payroll run already exists for the selected month/year
-- ✅ Unit tests for net pay calculation logic (xUnit)
-- ✅ Printable payslip view per employee (browser print dialog)
-- ❌ Pagination — not completed (see below)
-
----
-
-## Assumptions
-
-- Authorization and HTTPS redirect middleware omitted — not required by the brief
-- PF deduction is always 12% of Basic Salary regardless of days present
-- Professional Tax is flat ₹200 regardless of days present
-- Attendance is seeded statically for the current month. In production this would be populated by a dedicated attendance tracking system
-- If no attendance record exists for an employee in the selected month, they are excluded from the payroll run and the run is rolled back
-- Calculation logic lives in the stored procedure as specified in the brief. In a production system I would move this to the C# service layer using the `PayrollCalculator` class for better testability and separation of concerns
-- All stored procedures use `CREATE OR ALTER` so re-running the app never fails on existing objects
-- `PayrollCalculator.cs` exists as a C# mirror of the SP logic, used purely for unit testing
-
----
-
-## What I Would Add With More Time
-
-**Pagination on GET /payroll**
-The current endpoint returns all employees in one response. With more time I would add `pageNumber` and `pageSize` query parameters and return a paginated response with total count.
-
-**Structured Logging with Serilog**
-Replace the default ASP.NET logger with Serilog for structured, searchable logs. Would log every payroll run with month, year, employee count and execution time.
-
-**Authentication and Authorization**
-Add JWT-based auth with an HR Manager role. Only authenticated HR users should be able to trigger or view payroll runs.
-
-**Input Validation**
-Add FluentValidation to validate month (1–12), year (reasonable range), and prevent negative or zero values from reaching the database.
-
-**Move Calculation to C# Service Layer**
-Move payroll calculation out of the stored procedure and into `PayrollCalculator.cs` for better separation of concerns, easier unit testing, and simpler business rule changes.
-
-**Export to Excel/PDF**
-Allow HR to download the full payroll run as an Excel sheet or PDF report directly from the frontend.
-
-**Docker Support**
-Add a `Dockerfile` and `docker-compose.yml` so the app can be spun up without any local SQL Server installation.
-
-**Soft Delete for Employees**
-Add an `IsActive` flag to the Employees table so terminated employees are excluded from future payroll runs without losing historical data.
+- Pagination on `GET /api/payroll`
+- API versioning
+- Docker support for one-command local setup
+- Refresh token rotation instead of fixed 60-minute JWT expiry
+- Audit trail — track which user triggered each payroll run
