@@ -19,22 +19,28 @@
   </ItemGroup>
   
   <ItemGroup>
-  <Content Include="SQL\schema.sql">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </Content>
-  <Content Include="SQL\dump.sql">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </Content>
-  <Content Include="SQL\sp_RunPayroll.sql">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-</Content>
-<Content Include="SQL\sp_GetAllEmployees.sql">
+    <Content Include="SQL\schema.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\dump.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\sp_GetAttendanceForPayroll.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\sp_SavePayrollRun.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\sp_GetAllEmployees.sql">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SQL\sp_GetPayrollByMonthYear.sql">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SQL\sp_GetPayrollSlip.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="SQL\sp_RunPayroll.sql">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
 </ItemGroup>

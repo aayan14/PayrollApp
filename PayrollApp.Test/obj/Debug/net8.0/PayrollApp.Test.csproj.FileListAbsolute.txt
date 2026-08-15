@@ -351,3 +351,5 @@ C:\Users\HP\Desktop\TimeLabAssignment\PaymentAppImprovment\PayrollApp.Test\obj\D
 C:\Users\HP\Desktop\TimeLabAssignment\PaymentAppImprovment\PayrollApp.Test\obj\Debug\net8.0\ref\PayrollApp.Test.dll
 C:\Users\HP\Desktop\TimeLabAssignment\PaymentAppImprovment\PayrollApp.Test\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\HP\Desktop\TimeLabAssignment\PaymentAppImprovment\PayrollApp.Test\bin\Debug\net8.0\BCrypt-Net-Next.dll
+C:\Users\HP\Desktop\TimeLabAssignment\PaymentAppImprovment\PayrollApp.Test\bin\Debug\net8.0\SQL\sp_GetAttendanceForPayroll.sql
+C:\Users\HP\Desktop\TimeLabAssignment\PaymentAppImprovment\PayrollApp.Test\bin\Debug\net8.0\SQL\sp_SavePayrollRun.sql
